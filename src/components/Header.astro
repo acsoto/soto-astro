@@ -1,0 +1,32 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { HEADER_TITLE } from "../consts";
+---
+
+<header>
+  <nav class="flex items-center justify-between py-10">
+    <div>
+      <a href="/">
+        <div class="flex items-center justify-between gap-3">
+          <img
+            class="rounded-md"
+            src="src/components/images/logo.png"
+            }
+            alt="logo"
+            width={36}
+            height={36}
+          />
+          <div class="hidden px-2 text-2xl font-bold sm:block">
+            {HEADER_TITLE}
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="flex items-center text-base leading-5">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+  </nav>
+</header>
