@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Instagram from "./instagram.svg";
+import Mail from "./mail.svg";
+import Github from "./github.svg";
+import Rss from "./rss.svg";
+
+interface Props {
+    icon_type: string;
+}
+const { icon_type } = Astro.props as Props;
+var href: string;
+var iconSrc: ImageMetadata;
+
+if (icon_type === "instagram") {
+    href = "https://www.instagram.com/atksoto/";
+    iconSrc = Instagram;
+} else if (icon_type === "mail") {
+    href = "mailto:me@zzhgo.com";
+    iconSrc = Mail;
+} else if (icon_type === "github") {
+    href = "http://www.github.com/acsoto";
+    iconSrc = Github;
+} else {
+    href = "/feed.xml";
+    iconSrc = Rss;
+}
+---
+
+<a
+    class="text-sm text-gray-500 transition hover:text-gray-600"
+    target="_blank"
+    rel="noopener noreferrer"
+    href={href}
+>
+    <span class="sr-only">{icon_type}</span>
+    <Image
+        class="fill-current text-gray-700 hover:text-blue-400 dark:text-gray-200 h-6 w-6"
+        src={iconSrc}
+        alt={icon_type}
+    />
+</a>

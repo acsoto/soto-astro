@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { HEADER_TITLE } from "../consts";
+import { SITE_TITLE } from "../consts";
 ---
 
 <header>
@@ -11,13 +11,12 @@ import { HEADER_TITLE } from "../consts";
           <img
             class="rounded-md"
             src="src/components/images/logo.png"
-            }
             alt="logo"
             width={36}
             height={36}
           />
           <div class="hidden px-2 text-2xl font-bold sm:block">
-            {HEADER_TITLE}
+            {SITE_TITLE}
           </div>
         </div>
       </a>
