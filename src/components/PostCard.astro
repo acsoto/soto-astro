@@ -1,0 +1,42 @@
+---
+const { post } = Astro.props;
+import { Image } from "astro:assets";
+import FormattedDate from "./FormattedDate.astro";
+---
+
+<a href={`/blog/${post.slug}`}>
+    <article
+        class="mx-auto overflow-hidden rounded-xl shadow-md duration-300 hover:scale-105 dark:bg-dark-100"
+    >
+        <Image
+            src={post.data.image}
+            class="aspect-video w-full object-cover"
+            width={1600}
+            height={900}
+            alt=""
+        />
+        <div class="p-3">
+            <h2 class="text-xl font-extrabold">{post.data.title}</h2>
+            <section class="text-gray-500">
+                <p>{post.data.summary}</p>
+            </section>
+            <span class="ml-1 text-sm font-bold text-gray-600">
+                <FormattedDate date={post.data.date} />
+            </span>
+            <div class="mt-1 flex flex-row space-x-3">
+                {
+                    post.data.tags &&
+                        post.data.tags.map((tag) => (
+                            <div
+                                class={
+                                    "rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent"
+                                }
+                            >
+                                {tag}
+                            </div>
+                        ))
+                }
+            </div>
+        </div>
+    </article>
+</a>

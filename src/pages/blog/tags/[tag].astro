@@ -1,0 +1,43 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import PostCard from "../../../components/PostCard.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+
+    const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = posts.filter((post) =>
+            post.data.tags.includes(tag),
+        );
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout title={tag}>
+    <div class="mb-4">
+        <span
+            class="rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent"
+        >
+            {tag}
+        </span>
+    </div>
+    <ol class="grid gap-6 lg:grid-cols-2">
+        {
+            posts.map((post) => (
+                <li>
+                    <PostCard post={post} />
+                </li>
+            ))
+        }
+    </ol>
+</Layout>
