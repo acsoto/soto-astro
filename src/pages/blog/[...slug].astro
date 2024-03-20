@@ -1,0 +1,77 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("blog");
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+	<article>
+		<div
+			class="mx-auto xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700"
+		>
+			<header class="pt-6 xl:pb-6">
+				<div class="text-center">
+					<h1
+						class="text-xl font-extrabold leading-9 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-14"
+					>
+						{post.data.title}
+					</h1>
+					<dl
+						class="my-3 flex flex-col justify-center gap-3 lg:flex-row"
+					>
+						<div>
+							<dt class="sr-only">Published on</dt>
+							<dd
+								class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"
+							>
+								<time>
+									<FormattedDate date={post.data.date} />
+								</time>
+							</dd>
+						</div>
+						<div class="flex flex-row justify-center space-x-3">
+							{
+								post.data.tags &&
+									post.data.tags.map((tag) => (
+										<a
+											class={
+												"rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent hover:text-gray-500"
+											}
+											href={`/tags/${tag}`}
+										>
+											{tag}
+										</a>
+									))
+							}
+						</div>
+					</dl>
+					<Image
+						class="rounded-xl"
+						src={post.data.image}
+						width={1600}
+						height={900}
+						alt=""
+					/>
+				</div>
+			</header>
+			<div
+				class="prose max-w-none py-8 dark:prose-dark lg:prose-lg prose-img:rounded-xl"
+			>
+				<Content />
+			</div>
+		</div>
+	</article>
+</Layout>
