@@ -1,6 +1,8 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import LOGO from "./images/logo.png";
+import { Image } from "astro:assets";
 ---
 
 <header>
@@ -8,9 +10,9 @@ import { SITE_TITLE } from "../consts";
     <div>
       <a href="/">
         <div class="flex items-center justify-between gap-3">
-          <img
+          <Image
             class="rounded-md"
-            src="src/components/images/logo.png"
+            src={LOGO}
             alt="logo"
             width={36}
             height={36}
