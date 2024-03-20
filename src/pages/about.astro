@@ -1,0 +1,185 @@
+---
+import BUAA from "../components/icons/BUAA.svg";
+import NUS from "../components/icons/NUS.svg";
+import ReactIcon from "../components/icons/react.svg";
+import Django from "../components/icons/django.svg";
+import MySQL from "../components/icons/mysql.svg";
+import Nginx from "../components/icons/nginx.svg";
+import TypeScript from "../components/icons/typescript.svg";
+import TailWindCSS from "../components/icons/tailwindcss.svg";
+import TensorFlow from "../components/icons/tensorflow.svg";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+    {
+        name: "Musician and Genre Analysis Research",
+        type: "Meritorious Winner in the MCM/ICM 2021",
+        description: [
+            "Constructed adjacency lists describing the music influence network topology of musicians, establishing relationships between influencers and followers through weighted directed paths. Computed the music influence value for each musician using DFS recursion",
+            "Combined graph networks with mathematical modeling to calculate musician similarity using cosine similarity and music feature influence using Pearson correlation coefficient",
+        ],
+    },
+    {
+        name: "PetCharm Pet Platform & Campus Takeaway Delivery Platform",
+        type: "Backend Development",
+        description: [
+            "Built a database system using MySQL",
+            "Developed backend APIs using Django based on the MVC model, utilizing Nginx and uwsgi reverse proxy",
+            "Implemented secure login using session and cookie mechanisms, set up email verification and object storage systems",
+        ],
+    },
+    {
+        name: "Personal Website",
+        type: "Frontend Development",
+        description: [
+            "Built personal website using React and TypeScript, enhanced with TailwindCSS",
+        ],
+    },
+    {
+        name: "Memo & IoT Monitor",
+        type: "iOS Development",
+        description: [
+            "Developed iOS apps for diary, book, movie records, and IoT device control using Swift and SwiftUI. Used HTTP to call backend APIs for real-time information and control of IoT devices",
+        ],
+    },
+    {
+        name: "PCode Compiler",
+        type: "Java Development",
+        description: [
+            "Performed lexical analysis, syntax analysis, error handling, and generated Pcode code using finite automata, recursive descent, and other methods",
+        ],
+    },
+    {
+        name: "MIPS-CPU",
+        type: "Verilog Development",
+        description: [
+            "Implemented a 5-stage pipeline CPU based on MIPS instruction set using Verilog",
+        ],
+    },
+    {
+        name: "New York City Taxi Fare Analysis & Music Preference Analysis",
+        type: "Peter the Great St.Petersburg Polytechnic University Big Data & Machine Learning Project",
+        description: [
+            "Employed SVM, XGBoost, deep neural networks, and more for data analysis",
+        ],
+    },
+    {
+        name: "Long-term wind prediction in wind farm areas based on machine learning",
+        type: "Graduation Project",
+        description: [
+            "Implemented wind speed long-term forecasting using a deep neural network based on LSTM",
+        ],
+    },
+];
+---
+
+<Layout title="About">
+    <div class="prose max-w-none dark:prose-dark lg:prose-lg">
+        <h2 class="text-center font-extrabold">Zhou Zihang</h2>
+        <hr />
+
+        <h2>Education</h2>
+        <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+                <div>
+                    <Image src={BUAA} alt={"BUAA"} class="px-3" />
+                </div>
+                <div class="col-span-3">
+                    <div class="text-2xl font-extrabold">
+                        Beihang University
+                    </div>
+                    <div class="text-lg">
+                        Bachelor | Computer Science & Technology
+                    </div>
+                    <div class="text-lg text-gray-500">2019 - 2023</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div>
+                    <Image src={NUS} alt={"NUS"} />
+                </div>
+                <div>
+                    <div class="text-2xl font-extrabold">
+                        National University of Singapore
+                    </div>
+                    <div class="text-lg">Master | Computer Engineering</div>
+                    <div class="text-lg text-gray-500">2024 - Now</div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <h2>Skills</h2>
+        <div>
+            <p>
+                <b>Programming Languages:</b> C, Java, Python, JavaScript, HTML,
+                Swift, Verilog.
+            </p>
+            <p>
+                <b>Frameworks & Tools:</b>
+                <span class="space-x-2">
+                    <Image
+                        src={ReactIcon}
+                        alt={"React"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                    <Image
+                        src={Django}
+                        alt={"Django"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                    <Image
+                        src={MySQL}
+                        alt={"MySQL"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                    <Image
+                        src={Nginx}
+                        alt={"Nginx"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                    <Image
+                        src={TypeScript}
+                        alt={"TypeScript"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                    <Image
+                        src={TailWindCSS}
+                        alt={"TailWindCSS"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                    <Image
+                        src={TensorFlow}
+                        alt={"TensorFlow"}
+                        class="h-6 w-6 inline align-middle"
+                    />
+                </span>
+            </p>
+            <p>
+                <b>Languages:</b> Chinese (Native), English (TOEFL 108)
+            </p>
+        </div>
+
+        <hr />
+
+        <h2>Projects</h2>
+        {
+            projects.map((project) => (
+                <div>
+                    <h4>
+                        <div class="font-extrabold">{project.name}</div>
+                        <div class="text-gray-500">{project.type}</div>
+                    </h4>
+                    <ul>
+                        {project.description.map((description) => (
+                            <li class="text-sm">{description}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))
+        }
+    </div>
+</Layout>
