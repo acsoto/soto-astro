@@ -6,7 +6,7 @@ import PostCard from "../../components/PostCard.astro";
 import PageTitle from "../../components/PageTitle.astro";
 
 const posts = (await getCollection("blog")).sort(
-	(a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
 const tags = {};
