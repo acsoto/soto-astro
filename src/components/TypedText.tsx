@@ -5,7 +5,6 @@ export default function TypedText({ messages }: { messages: string[] }) {
 
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
-  console.log(el.current)
 
   useEffect(() => {
     const typed = new Typed(el.current, {
