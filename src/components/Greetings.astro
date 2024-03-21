@@ -1,27 +1,33 @@
 ---
+import { Image } from "astro:assets";
 import TypedText from "./TypedText";
+import PartyingFace from "./twemoji/partying-face.svg";
+import ChinaFlag from "./twemoji/china-flag.svg";
 ---
 
 <div class="lg:mb-10 lg:mt-10">
   <h1
     class="bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-7xl font-extrabold text-transparent dark:to-blue-500"
   >
-    Hi Friends,
+    Hi Friends, 你好!
   </h1>
   <div class="prose dark:prose-dark lg:prose-lg">
     <p>
-      Welcome! I'm <b>Zhou Zihang</b>.
-      <img
-        src="src/components/twemoji/partying-face.svg"
-        class="align-middle h-4 w-4 inline"
+      Welcome! I'm <b>Zhou Zihang</b>
+      <Image
+        src={PartyingFace}
+        alt="Partying face"
+        class="align-middle w-5 h-5 inline"
+      />.
+      "SOTO" is the abbreviation I use on social media.
+      <br />
+      I'm from China
+      <Image
+        src={ChinaFlag}
+        alt="China flag"
+        class="align-middle w-5 h-5 inline"
       />
-    </p>
-
-    <p>
-      "SOTO" is the abbreviation I use on social media. I currently live in
-      China and have just graduated from Beihang University with a bachelor's
-      degree in Computer Science and Technology. I'm planning to study abroad in
-      Canada and am currently waiting for my visa.
+      . I currently study in Singapore.
     </p>
 
     <p>
@@ -41,19 +47,17 @@ import TypedText from "./TypedText";
         client:load
         messages={[
           "I was born in 2000.",
-          "I was raised in Alxa, Inner Mongolia.",
+          "I was raised in Alxa, Inner Mongolia, China.",
           "I like 🏊‍♂️ / 🏃 / 🏸.",
           "I like 進撃の巨人.",
           "I like Minecraft.",
-          "I like LOL 🎮.",
-          "I like J-POP/Chinese folk music 🎵.",
+          "I like League of Legends 🎮.",
+          "I like Western-POP/Japanese-POP/Chinese-Folk music 🎵.",
           "...",
         ]}
       />
       <p>
-        This website is used to introduce myself, publish some regular blogs,
-        document my travel diaries, as well as record books, movies, and music
-        I've experienced. Feel free to
+        This website is for recording life. Feel free to
         <a href="/about"> get to know me better.</a>
       </p>
     </div>
