@@ -26,7 +26,7 @@ import FormattedDate from "./FormattedDate.astro";
             <div class="mt-1 flex flex-row space-x-3">
                 {
                     post.data.tags &&
-                        post.data.tags.map((tag) => (
+                        post.data.tags.map((tag: string) => (
                             <div
                                 class={
                                     "rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent"

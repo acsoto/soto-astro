@@ -1,5 +1,4 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import PostCard from "../../components/PostCard.astro";
@@ -9,7 +8,7 @@ const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
-const tags = {};
+const tags: Record<string, number> = {};
 
 posts.forEach((post) => {
 	post.data.tags.forEach((tag) => {
@@ -31,7 +30,9 @@ const timeMap: Map<string, Map<string, Array<any>>> = new Map();
 for (const post of posts) {
 	if (post.data.date !== null) {
 		const year: string = new Date(post.data.date).getFullYear().toString();
-		const month: string = new Date(post.data.date).toDateString().split(" ")[1];
+		const month: string = new Date(post.data.date)
+			.toDateString()
+			.split(" ")[1];
 		if (!timeMap.has(year)) {
 			timeMap.set(year, new Map());
 		}
@@ -57,7 +58,6 @@ for (const post of posts) {
 			>
 				{
 					showingPosts.map((post) => {
-						const { slug } = post;
 						return (
 							<li>
 								<PostCard post={post} />
@@ -157,7 +157,11 @@ for (const post of posts) {
 																		"text-soto-100 hover:text-soto-200 dark:text-opacity-80"
 																	}
 																>
-																	{post.data.title}
+																	{
+																		post
+																			.data
+																			.title
+																	}
 																</span>
 															</a>
 														</div>
