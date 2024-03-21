@@ -3,6 +3,7 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import LOGO from "./images/logo.png";
 import { Image } from "astro:assets";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
@@ -28,6 +29,7 @@ import { Image } from "astro:assets";
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
+      <ThemeIcon />
     </div>
   </nav>
 </header>
