@@ -2,6 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import ThemeIcon from "./ThemeIcon.astro";
+import LOGO from "./images/logo.png";
 ---
 
 <header>
@@ -11,7 +12,7 @@ import ThemeIcon from "./ThemeIcon.astro";
         <div class="flex items-center justify-between gap-3">
           <img
             class="rounded-md"
-            src='src/components/images/logo.png'
+            src={LOGO.src}
             alt="logo"
             width={36}
             height={36}
