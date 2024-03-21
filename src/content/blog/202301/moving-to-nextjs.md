@@ -27,13 +27,11 @@ I modified something else except for changing designs from the starter to my las
 When I was trying to upgrade some dependencies, I found it difficult to solve some problems. For example, if I upgrade React to 18 and NextJS to 13, everything seems to be OK in dev mode. But some buttons don't work after officially building and running it.
 
 - React 18 "Hydration failed because the initial UI does not match what was rendered on the server."
-  https://stackoverflow.com/questions/71706064/react-18-hydration-failed-because-the-initial-ui-does-not-match-what-was-render
+  <https://stackoverflow.com/questions/71706064/react-18-hydration-failed-because-the-initial-ui-does-not-match-what-was-render>
 - Package subpath './jsx-runtime.js' is not defined by "exports"
   update pkg
 
 ## Migrate To TypeScript
-
-<Image src="http://img.atksoto.com/2022/202301281627025.png" alt="" width={200} height={50}/>
 
 As said in TypeScript Documents:
 
@@ -50,7 +48,7 @@ TypeScript has [so many features to learn](https://basarat.gitbook.io/typescript
 
 it's like moving Python to Java😂:
 
-```tsx {1}
+```tsx
 const timeMap: Map<string, Map<string, Array<FrontMatter>>> = new Map()
 for (const post of posts) {
   if (post.date !== null) {
@@ -76,11 +74,6 @@ After migrating to TypeScript, I tried to upgrade React and Next again but it st
 Despite `mdx`, we can use its features in `md` files without the need to change the filename extension. But it is a bit annoying to edit JSX code in `md` files without auto-completion.
 
 With this starter and React framework, It's easy to use JSX in a markdown file directly. For example:
-
-<div className="grid grid-cols-2 gap-3">
-<div>![](http://img.atksoto.com/2022/202301281557064.png)</div>
-<div>![](http://img.atksoto.com/2022/202301242342680.png)</div>
-</div>
 
 source code:
 
@@ -113,17 +106,17 @@ Actually, we can just use third part API and JSX to design components and use th
 
 ## NextJS Images[^1]
 
-[^1]: https://nextjs.org/docs/basic-features/image-optimization
+[^1]: <https://nextjs.org/docs/basic-features/image-optimization>
 
 The problem is that I use remote images that are hosted on Aliyun OSS. So when rendering markdown files, I can ~~not~~ (I find I can later) get `depth` and `height` in advance, which is necessary for NextJS Images. So If I want to change `img` to `NextImage`, I have to get images metadata before the rendering process. I use [image-size](https://www.npmjs.com/package/image-size?activeTab=readme) to get metadata and [plaiceholder](https://github.com/joe-bell/plaiceholder) to get `blur64` of the image (Referring [this post](https://nikolovlazar.com/blog/generating-blur-for-dynamic-images-nextjs))
 
 Visit all nodes (We need to use [unist-util-visit](https://github.com/syntax-tree/unist-util-visit)) to get `img` nodes and `addProps` for them. `visit` lets us find the image nodes (in markdown, an image will be transferred to `p` node and `img` node). The first parameter is `tree`; the second is the function that filters nodes; the third parameter is the function that does something to nodes.[^2]
 
-[^2]: Content as structured data https://unifiedjs.com
+[^2]: Content as structured data <https://unifiedjs.com>
 
 **Note**: Use `async`, `await`, `Promise`.
 
-```ts:remark-img-to-jsx.ts {2} {24}
+```ts
 import { visit } from 'unist-util-visit'
 import imageSize from 'image-size'
 import { ISizeCalculationResult } from 'image-size/dist/types/interface'
@@ -154,7 +147,7 @@ const remarkImgToJsx = () => {
 
 `addProps` replaces the original attributes of image nodes with the NextJS Image attributes (blur placeholder is calculated by [plaiceholder](https://github.com/joe-bell/plaiceholder))
 
-```ts:remark-img-to-jsx.ts {9,10}
+```ts
 async function addProps(imageNode: UnistImageNode): Promise<void> {
   let res: ISizeCalculationResult
   let blur64: string
