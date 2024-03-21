@@ -1,5 +1,5 @@
 ---
-
+import TypedText from "./TypedText";
 ---
 
 <div class="lg:mb-10 lg:mt-10">
@@ -36,12 +36,20 @@
       <a href="https://www.instagram.com/puppydoudou/">instagram</a>.
     </p>
 
-    <div class="type-wrap">
-      <span style="white-space: pre;"></span>
-
-      <div id="typed"></div>
-      <br />
-
+    <div>
+      <TypedText
+        client:load
+        messages={[
+          "I was born in 2000.",
+          "I was raised in Alxa, Inner Mongolia.",
+          "I like 🏊‍♂️ / 🏃 / 🏸.",
+          "I like 進撃の巨人.",
+          "I like Minecraft.",
+          "I like LOL 🎮.",
+          "I like J-POP/Chinese folk music 🎵.",
+          "...",
+        ]}
+      />
       <p>
         This website is used to introduce myself, publish some regular blogs,
         document my travel diaries, as well as record books, movies, and music
