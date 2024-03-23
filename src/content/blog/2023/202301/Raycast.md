@@ -12,7 +12,7 @@ image: 'http://img.atksoto.com/2022/202301040034085.png'
 
 > Raycast：2022 Wrapped
 > Mac 平台著名的启动器  [Raycast](https://sspai.com/link?target=https%3A%2F%2Fwww.raycast.com%2F)  也推出了年度总结报告。这份报告分为四个部分，分别是应用的使用情况、调用拓展情况、通过 Raycast 启动应用的情况，以及最后的总结。
-> ![](https://cdn.sspai.com/2022/12/29/ec9a0b96ca3e8d732a6bd0d0caa3b248.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
+> ![](./Raycast/1.jpeg)
 
 之前一直没有尝试过此类软件是因为元老 [Alfred](https://www.alfredapp.com) 实在是长得不好看，让我觉得没法融入系统，今天在思索怎么样能省事地运行 hugo server 的时候想到可以用这类软件来实现，于是下载了 Alfred 发现脚本功能是付费的，正在研究有无必要的时候发现了 Raycast 这个软件，一眼爱上 UI，而且免费，于是下了一个来折腾，发现确实是个好东西。
 
@@ -45,20 +45,20 @@ do shell script "open http://localhost:1313"
 
 美观好用，非常让人满意。
 
-![](http://img.atksoto.com/2022/202301040009617.png)
+![](./Raycast/202301040009617.png)
 
 ## 社区脚本
 
-![](http://img.atksoto.com/2022/202301040014993.png)
+![](./Raycast/202301040014993.png)
 
 安装插件很方便，除此以外一些简单的脚本可以在官方维护的这个库里找到 [raycast
 /script-commands](https://github.com/raycast/script-commands) 例如这个从当前文件夹打开终端就很方便，省的右键点击目录再打开了。
 
-![](http://img.atksoto.com/2022/202301040015940.png)
+![](./Raycast/202301040015940.png)
 
 这个图标太丑了，可以自己改一下。
 
-![](http://img.atksoto.com/2022/202301040015673.png)
+![](./Raycast/202301040015673.png)
 
 ## 其他功能
 
@@ -81,7 +81,7 @@ do shell script "open http://localhost:1313"
 
 ## 其他插件
 
-![](http://img.atksoto.com/2022/202301042151560.png)
+![](./Raycast/202301042151560.png)
 
 装了几个很方便的社区插件
 
@@ -116,13 +116,13 @@ do shell script "open http://localhost:1313"
 
 confetti!
 
-![](http://img.atksoto.com/2022/202301042141088.gif)
+![](./Raycast/202301042141088.gif)
 
 [Rayso](https://www.ray.so)
 
 突然发现之前收藏的一个好看的代码截图工具网站也是 Raycast 维护的。同样的，右下角可以获取这个脚本。
 
-![](http://img.atksoto.com/2022/202301042143074.png)
+![](./Raycast/202301042143074.png)
 
 ## End
 

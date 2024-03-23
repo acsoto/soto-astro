@@ -17,7 +17,7 @@ image: 'http://img.atksoto.com/2022/202301181331217.png'
 
 但是我又想做一个能直接返回一个 svg 文件的 api，类似于 [GitHub 上的数据统计](https://github.com/anuraghazra/github-readme-stats)，这样可以方便的插到 html 里面，如（我放到自己 vercel 上了）：
 
-<img src="https://githubstats.zzhgo.com/api?username=acsoto&count_private=true&show_icons=true&theme=merko&bg_color=DEG&text_color=ABB581"/>
+<img src="./front-end-learning-and-gatsby/api"/>
 
 傻傻分不清楚 js 前端后端的区别，在研究这个 API 的过程中，我就不知不觉转移到了研究 AC 官网 wiki(用 vitepress 做的)如何能和官网主页用 vue 集成一下，因为此前几乎没有任何前端知识，搞不清楚一大堆的 js 框架都是干什么的，研究这个研究了很久，最后以 css 实在是太麻烦和样式相互乱覆盖告终。
 
@@ -98,7 +98,7 @@ Gatsby 比起直接用 hugo 这种博客生成器来说要自己做一些事情�
 
 [^3]: tailwindcss: https://tailwindcss.com/
 
-![](http://img.atksoto.com/2022/202301181344132.png)
+![](./front-end-learning-and-gatsby/202301181344132.png)
 
 一旦开始弄点自己的有成就感的东西，还是很上头的，每天调调样式，几个小时就过去了。
 
@@ -173,7 +173,7 @@ query BlogPostByTag($targetTag: String!) {
 }
 ```
 
-![](http://img.atksoto.com/2022/202301181347952.png)
+![](./front-end-learning-and-gatsby/202301181347952.png)
 
 ## Archive 页面
 
@@ -233,7 +233,7 @@ for (const post of posts) {
 }
 ```
 
-![](http://img.atksoto.com/2022/202301181348896.png)
+![](./front-end-learning-and-gatsby/202301181348896.png)
 
 ## 自定义 slug
 
@@ -370,4 +370,4 @@ const url = node.interest.sharing_url
 
 呈现到页面上
 
-![](http://img.atksoto.com/2022/202301181347537.png)
+![](./front-end-learning-and-gatsby/202301181347537.png)
