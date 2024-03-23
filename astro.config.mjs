@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel/static';
 export default defineConfig({
   integrations: [preact(), tailwind(), mdx()],
   image: {
-    remotePatterns: [{ protocol: "https" }],
+    domains: ["img.atksoto.com"],
   },
   output: 'static',
   adapter: vercel({
