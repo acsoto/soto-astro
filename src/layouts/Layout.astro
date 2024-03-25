@@ -4,11 +4,15 @@ import Footer from "../components/Footer.astro";
 interface Props {
 	title: string;
 	image?: string;
+	description?: string;
+	url?: string;
 }
 
 const {
 	title,
-	image = "http://img.atksoto.com/2024/03/a7968ac71e5b7e42f591d0539454520d.jpg",
+	image = "http://img.atksoto.com/2024/03/2576ffc2c12b967d2d7a4d375fccdbf3.jpg",
+	description = "",
+	url = "https://www.zzhgo.com",
 } = Astro.props;
 ---
 
@@ -16,13 +20,26 @@ const {
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="SOTO SPACE" />
+		<title>{title} | SOTO</title>
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<meta property="og:image" content={image} />
-		<meta property="twitter:image" content={image} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title} | SOTO</title>
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content={url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="zzhgo.com" />
+		<meta property="twitter:url" content={url} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
 	</head>
 	<body
 		class="bg-white text-black antialiased dark:bg-dark dark:text-soto-400"
