@@ -14,4 +14,10 @@ export default defineConfig({
   adapter: vercel({
     webAnalytics: { enabled: true }
   }),
+  markdown: {
+    shikiConfig: {
+      // https://shiki.style/themes
+      theme: 'material-theme-darker',
+    },
+  },
 });
