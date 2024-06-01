@@ -46,12 +46,8 @@ for (const post of posts) {
 
 <Layout title="Blog">
 	<div class="space-y-10">
-		<div>
-			<h1
-				class="text-xl font-extrabold leading-9 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-14"
-			>
-				Recent Posts
-			</h1>
+		<div class="space-y-5">
+			<PageTitle>Recent Posts</PageTitle>
 			<ul
 				class={"grid gap-6 lg:grid-cols-2"}
 				style={{ listStyle: `none` }}
@@ -68,12 +64,8 @@ for (const post of posts) {
 			</ul>
 		</div>
 
-		<div>
-			<h1
-				class="text-xl font-extrabold leading-9 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-14"
-			>
-				Tags
-			</h1>
+		<div class="space-y-5">
+			<PageTitle>Tags</PageTitle>
 			<div class="flex flex-wrap gap-4">
 				{
 					sortedTags.map((t) => {
@@ -94,7 +86,7 @@ for (const post of posts) {
 			</div>
 		</div>
 
-		<div>
+		<div class="space-y-5">
 			<PageTitle>Archive</PageTitle>
 			{
 				Array.from(timeMap.keys()).map((year) => {
