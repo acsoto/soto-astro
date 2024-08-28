@@ -1,29 +1,26 @@
 ---
-import SocialIcons from "./social/SocialIcons.astro";
+import {Instagram, Mail, Github, Rss} from "lucide-react";
+const icons = [
+    {icon: Instagram, link: "https://www.instagram.com/atksoto/"},
+    {icon: Mail, link: "mailto:me@zzhgo.com"},
+    {icon: Github, link: "http://www.github.com/acsoto"},
+    {icon: Rss, link: "/rss.xml"},
+]
 ---
 
 <footer>
     <div class="mt-16 flex flex-col items-center">
         <div class="mb-3 flex space-x-4">
-            <SocialIcons icon_type="instagram" />
-            <SocialIcons icon_type="mail" />
-            <SocialIcons icon_type="github" />
-            <SocialIcons icon_type="rss" />
+            {icons.map((icon) => (
+                    <a href={icon.link}
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <icon.icon/>
+                    </a>
+            ))}
         </div>
-        <div
-            class="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400"
-        >
-            <div>{`© ${new Date().getFullYear()}`}</div>
-            <div>{` • `}</div>
-            <a href="/">SOTO</a>
-        </div>
-        <div class="mb-8 text-sm text-gray-500 dark:text-gray-400">
-            Powered by{` `}
-            <a class={"underline"} href="https://astro.build">Astro</a>
-            {` `}&{` `}
-            <a class={"underline"} href="https://tailwindcss.com">
-                TailwindCSS
-            </a>
+        <div class="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+            Copyright © {new Date().getFullYear()} SOTO
         </div>
     </div>
 </footer>
