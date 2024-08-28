@@ -1,5 +1,5 @@
 {
-  "name": "magenta-matter",
+  "name": "soto",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -28,10 +28,8 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
+    "@tailwindcss/typography": "^0.5.13",
     "typed.js": "^2.1.0",
     "typescript": "^5.4.5"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13"
   }
 }
