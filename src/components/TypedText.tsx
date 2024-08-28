@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'preact/hooks';
+import { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
 
 export default function TypedText({ messages }: { messages: string[] }) {
