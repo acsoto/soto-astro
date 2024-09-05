@@ -8,13 +8,16 @@ import FormattedDate from "./FormattedDate.astro";
     <article
         class="mx-auto overflow-hidden rounded-xl shadow-md duration-300 hover:scale-105 dark:bg-dark-100"
     >
-        <Image
-            src={post.data.image}
+        {post.data.cover?(
+            <Image
+            src={post.data.cover}
             class="aspect-video w-full object-cover"
             width={1600}
             height={900}
             alt=""
         />
+        ):
+        <></>}
         <div class="p-3">
             <h2 class="text-xl font-extrabold">{post.data.title}</h2>
             <section class="text-gray-500">

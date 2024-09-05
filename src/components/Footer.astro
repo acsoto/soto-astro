@@ -1,26 +1,31 @@
 ---
-import {Instagram, Mail, Github, Rss} from "lucide-react";
+import Instagram from "./icons/instagram.svg";
+import Github from "./icons/github.svg";
+import Mail from "./icons/mail.svg";
+import Rss from "./icons/rss.svg";
+import { Image } from "astro:assets";
+
 const icons = [
-    {icon: Instagram, link: "https://www.instagram.com/atksoto/"},
-    {icon: Mail, link: "mailto:me@zzhgo.com"},
-    {icon: Github, link: "http://www.github.com/acsoto"},
-    {icon: Rss, link: "/rss.xml"},
-]
+  { icon: Instagram, link: "https://www.instagram.com/atksoto/" },
+  { icon: Mail, link: "mailto:me@zzhgo.com" },
+  { icon: Github, link: "http://www.github.com/acsoto" },
+  { icon: Rss, link: "/rss.xml" },
+];
 ---
 
 <footer>
-    <div class="mt-16 flex flex-col items-center">
-        <div class="mb-3 flex space-x-4">
-            {icons.map((icon) => (
-                    <a href={icon.link}
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <icon.icon/>
-                    </a>
-            ))}
-        </div>
-        <div class="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-            Copyright © {new Date().getFullYear()} SOTO
-        </div>
+  <div class="mt-16 flex flex-col items-center">
+    <div class="mb-3 flex space-x-4">
+      {
+        icons.map((icon) => (
+          <a href={icon.link} target="_blank" rel="noopener noreferrer">
+            <Image src={icon.icon} alt={icon.link} />
+          </a>
+        ))
+      }
     </div>
+    <div class="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+      Copyright © {new Date().getFullYear()} SOTO
+    </div>
+  </div>
 </footer>

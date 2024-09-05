@@ -1,21 +1,21 @@
 ---
 title: AC又被黑了
 tags: []
-image: 'http://img.atksoto.com/2022/202212310105241.png'
 date: 2021-11-28 16:17:36
+cover: './AChacked/ad6d90d903a601ac43deffc69ef8bab3_MD5.png'
 ---
 
 下午突然看到服务器有人发
 
-![](http://img.atksoto.com/2022/202212310104240.png)
+![](AChacked/2ff5f8e25caecacb251103e71d19619a_MD5.png)
 
 仔细一看
 
-![](http://img.atksoto.com/2022/202212310104990.png)
+![](AChacked/b60e6a86963a00dd18a1d4832264b9c5_MD5.png)
 
 打开链接一看：
 
-![](http://img.atksoto.com/2022/202212310105241.png)
+![](AChacked/ad6d90d903a601ac43deffc69ef8bab3_MD5.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

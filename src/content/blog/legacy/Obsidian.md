@@ -2,7 +2,7 @@
 title: Obsidian体验与新工作流
 date: 2021-12-07 12:11:00
 tags: [APP, Obsidian]
-image: http://img.atksoto.com/2022/soto-pictures/2021-12/XmECh3.png
+cover: './Obsidian/489bcfb70b9c20fae29197561a120506_MD5.png'
 ---
 
 最近在玩[Hexo](https://hexo.io/)，加上很多零散的笔记和文档也是 markdown 写的，发现自己用 markdown 的频率高了很多。本来就在计划换一个效率更高的 markdown 编辑器，毕竟确实有很多 markdown 的场景是单个编辑器没法覆盖的，[Typora](https://www.typora.io)现在也收费了，趁着这个契机，打算换一个软件用。
@@ -17,7 +17,7 @@ image: http://img.atksoto.com/2022/soto-pictures/2021-12/XmECh3.png
 
 首先 Obsidian 的社区非常丰富，有很多非常好看的主题，换上之后感觉比之前 typora 的打字体验好了很多。
 
-![社区主题](http://img.atksoto.com/2022/soto-pictures/2021-12/MIXxm6.png)
+![社区主题](Obsidian/30f7b2e1a8f5729b7840e07f9fd2f0c1_MD5.png)
 
 推荐一个 [主题 YIN & YANG](https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme) 我现在在用，很好看。
 
@@ -57,11 +57,11 @@ cover:
 
 这是他给我的仓库生成的图谱，因为没怎么建双链，所以边比较少，倒是挺好玩
 
-![关系图谱](http://img.atksoto.com/2022/soto-pictures/2021-12/eam3iK.png)
+![关系图谱](Obsidian/489bcfb70b9c20fae29197561a120506_MD5.png)
 
 不过标签和查找功能倒是感觉很好用，我之前给 hexo 写的标签他也很好的解析下来了，在我真正写笔记的时候，可以非常方便的查到我需要的东西。
 
-![我写笔记的时候](http://img.atksoto.com/2022/soto-pictures/2021-12/XmECh3.png)
+![我写笔记的时候](Obsidian/0b979cc6e9c9b9715ddb4b592d0670f3_MD5.png)
 
 ## 同步
 
@@ -85,7 +85,7 @@ Obsidian 不同于 Typora 的一点是图片不是很好处理，Obsidian 的方
 
 > 正如其名，当你使用日记功能时，Obsidian 会为你创建一篇以当天日期命名的空白笔记。当然，如果这篇笔记已经存在了的话，Obsidian 则会为你打开它。日记功能就是为了让你更方便地记录日常生活而设计的，你可以在每天的日记中写下你的生活记录、待办事项，抑或是当天的笔记总结，等等。日记功能允许你为日记指定模板，这样你就不需要重复调整日记的格式。
 
-![日记效果](http://img.atksoto.com/2022/soto/202112142314916.png)
+![日记效果](Obsidian/11cdef4e0c916a19658e0f4a05d32915_MD5.png)
 
 用双链和以前的自己对话，也是很有趣的一件事情。
 

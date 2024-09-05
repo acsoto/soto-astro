@@ -2,12 +2,12 @@
 title: 【游记】西安
 date: 2022-07-04 00:46:00
 tags: [游记]
-image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
+cover: './xian/202208090132048.jpeg'
 ---
 
 ## DAY 1
 
-![](http://img.atksoto.com/2022/soto/202208090139518.JPEG)
+![](xian/293301664af6bb8afa5225fd0368d59f_MD5.jpg)
 
 话说阿拉善到西安机票只要 70 元，不过这个飞机是真不行
 
@@ -15,25 +15,25 @@ image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
 
 ### 钟楼
 
-![](http://img.atksoto.com/2022/soto/202208090101768.jpeg)
+![](xian/38851db5067daa1993fed9a3f1747777_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090106184.jpeg)
+![](xian/f7d441a60385be56c175921e8d1e94ca_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090107896.jpeg)
+![](xian/ae3ebc4af6026a5cf86b077a02c5ccde_MD5.jpg)
 
 ### 回民街
 
-![](http://img.atksoto.com/2022/soto/202208090108157.jpeg)
+![](xian/fa49bd0e7157345af6a17f86866f8df1_MD5.jpg)
 
 豆豆西安分豆
 
-![](http://img.atksoto.com/2022/soto/202208090141293.jpeg)
+![](xian/bcd89d662a009a05247fbcfe0d92d7b6_MD5.jpg)
 
 晚上吃了附近评价比较好的羊肉泡馍和烤肉，感觉一般。
 
-![](http://img.atksoto.com/2022/soto/202208090125839.jpeg)
+![](xian/497c82624a042462d6685038229553f9_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090125101.jpeg)
+![](xian/565726f5075efc8530d8881f4ab8a79c_MD5.jpg)
 
 ## DAY 2
 
@@ -41,13 +41,13 @@ image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
 
 ### 秦始皇陵
 
-![](http://img.atksoto.com/2022/soto/202208090139730.JPEG)
+![](xian/f6f823228dd40d14a9a868b304f44993_MD5.jpg)
 
 没有预期的那么震撼，不过还是震撼了几秒。
 
-![](http://img.atksoto.com/2022/soto/202208090111024.jpeg)
+![](xian/e336e21af475ae148ecc78ad05fdd5d3_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090111133.jpeg)
+![](xian/aa00adf4dcce9a34e4f5795ce88470db_MD5.jpg)
 
 这个一号坑感觉保护得不大行。
 
@@ -57,15 +57,15 @@ image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
 
 不带要看华清宫了，缆车鸟瞰了下
 
-![](http://img.atksoto.com/2022/soto/202208090120157.jpeg)
+![](xian/77f390affe3ea323671e161913f658a5_MD5.jpg)
 
 可惜这个骊山塌方了，上来只让待在观景台看一眼就下去了
 
-![](http://img.atksoto.com/2022/soto/202208090120002.jpeg)
+![](xian/7b07e72f738d5e258861faaa90db4577_MD5.jpg)
 
 瘦弱的杨贵妃
 
-![](http://img.atksoto.com/2022/soto/202208090121501.jpeg)
+![](xian/fdd878996b719920b08d00e856c5f711_MD5.jpg)
 
 回去了，极累。
 
@@ -73,35 +73,35 @@ image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
 
 ### 古城墙
 
-![](http://img.atksoto.com/2022/soto/202208090122051.jpeg)
+![](xian/4d332a8e1c43b252d6518bbbc8b0c5da_MD5.jpg)
 
 没有吃到这家出名的肉夹馍，不过吃了旁边出名的油泼面
 
-![](http://img.atksoto.com/2022/soto/202208090123820.jpeg)
+![](xian/6f237e7f2b9a23e2453c48cff0501d57_MD5.jpg)
 
 碗很大
 
-![](http://img.atksoto.com/2022/soto/202208090123586.jpeg)
+![](xian/c7cae1389ed3864957ced9bee1a46855_MD5.jpg)
 
 三联
 
-![](http://img.atksoto.com/2022/soto/202208090126530.jpeg)
+![](xian/f5121bca9204a66db3e517c157ea3e78_MD5.jpg)
 
 古城墙，下午天气不错
 
-![](http://img.atksoto.com/2022/soto/202208090127822.jpeg)
+![](xian/f8c5cca2624bacf0b7b0cbfab64c6d28_MD5.jpg)
 
 ### 大唐不夜城
 
 大唐不夜城是真的繁华和热闹啊，华灯初上，让我这两天对西安的印象焕然一新。
 
-![](http://img.atksoto.com/2022/soto/202208090130984.jpeg)
+![](xian/501e029a96ae4d7dc4a09d582b51a061_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090131157.jpeg)
+![](xian/bea568ac4179a0e81ceab7b992c387c2_MD5.jpg)
 
 期待已久的“烂怂大雁塔”
 
-![](http://img.atksoto.com/2022/soto/202208090132097.jpeg)
+![](xian/991c3dc8cfa70fe64f59893d8d853d29_MD5.jpg)
 
 很不巧，赶上疫情了。
 
@@ -111,14 +111,14 @@ image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
 
 白天的大唐不夜城
 
-![](http://img.atksoto.com/2022/soto/202208090133597.jpeg)
+![](xian/785f7a4b209fc0afb2749e3f196b4b2b_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090139884.JPEG)
+![](xian/92859e3680d70219fb7359913ec3bc51_MD5.jpg)
 
 大唐芙蓉园
 
-![](http://img.atksoto.com/2022/soto/202208090137525.jpeg)
+![](xian/70fb1bed08d5cce37dbf12125a8c7556_MD5.jpg)
 
-![](http://img.atksoto.com/2022/soto/202208090137503.jpeg)
+![](xian/2db161eab3e63d702fef77dd0578d0ce_MD5.jpg)
 
 然后就溜了。

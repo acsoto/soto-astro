@@ -2,8 +2,7 @@
 title: 天空之城，米店和XLD
 date: 2021-12-28 01:24:00
 tags: [Page]
-categories: [日常]
-image: http://img.atksoto.com/2022/202302280830739.png
+cover: './XLD/202302280830739.png'
 ---
 
 现在是凌晨 1:26，刚水完领导力的报告，听着天空之城。
@@ -12,11 +11,11 @@ image: http://img.atksoto.com/2022/202302280830739.png
 
 想想自己还挺喜欢他的歌的，却一直只能在 Spotify 听，于是到北邮人下了他的一堆专辑，打算导进 AM。
 
-![](http://img.atksoto.com/2022/soto/202112280128122.png)
+![](XLD/08efa13b130899d193c673b1cca99a24_MD5.png)
 
 下载下来的文件是整个专辑完整的 flac 和 cue 文件
 
-![](http://img.atksoto.com/2022/soto/202112280130703.png)
+![](XLD/0ddefebad5e58180d732fe3584adee7c_MD5.png)
 
 这里用之前在少数派看到的 XLD 进行了一波转换。[^sspai]
 
@@ -24,16 +23,15 @@ image: http://img.atksoto.com/2022/202302280830739.png
 
 直接用 XLD 点开 cue 文件，把封面图拖上去，对没有正确识别的歌名稍作修改后点击 Transcode 即可。
 
-![](http://img.atksoto.com/2022/soto/202112280138823.png)
+![](XLD/5d965b817b7b88b2681edde3a3a1bf56_MD5.png)
 AM 的服务器在内地速度不是很好，因为我担心移动端同步过去播放卡的问题，我在这里生成了 AAC（苹果的一种有损格式），每首歌就只剩下几 mb 了，直接拖进 AM 里即可。
 
 如果单曲的对应专辑出现问题，直接批量选择之后用 AM 自带的编辑功能稍作修改即可。
 
-![](http://img.atksoto.com/2022/soto/202112280139067.png)
+![](XLD/71ffeab20b475988c1a1e7adad437c80_MD5.png)
 
-![](http://img.atksoto.com/2022/soto/202112280141620.png)
+![](XLD/6644a24b568d5830a57a6a9b655d7dd3_MD5.png)
 
-<img src="http://img.atksoto.com/2022/soto/202112280143546.PNG" width="300" alt="webhooks"></img>
 
 > 港岛妹妹，你献给我的西班牙馅饼
 >

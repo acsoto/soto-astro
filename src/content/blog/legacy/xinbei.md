@@ -1,6 +1,6 @@
 ---
 title: 新北老年活动中心
-image: 'http://img.atksoto.com/2022/202212310103337.png'
+cover: './xinbei/202212310103337.png'
 date: 2021-11-26 10:22:27
 tags: []
 ---
@@ -11,12 +11,12 @@ tags: []
 
 上个学期上早八吃早饭，总会有一群阿姨比我更早，我不知道他们着不着急，反正我很着急
 
-![](http://img.atksoto.com/2022/soto-pictures/2021-12/WechatIMG5911.jpeg)
+![](xinbei/9ae1b846774b104b7f7d66f8e89a25a9_MD5.jpg)
 
 新的乒乓球桌也理所应当的成为了他们的活动设施
 
-![](http://img.atksoto.com/2022/202212310102694.png)
+![](xinbei/0fac511be9b81fb61f895c69f8a4dbf8_MD5.png)
 
 合一又是另一回事，属于是中小学食堂了
 
-![](http://img.atksoto.com/2022/soto-pictures/2021-12/WechatIMG5944.jpeg)
+![](xinbei/2eb80b6c6b30bc3a11ebe980bafc3371_MD5.jpg)
