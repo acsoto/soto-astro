@@ -1,0 +1,68 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+const imagePath = `/src/assets/albums/${id}.jpg`;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/albums/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+  throw new Error(`"${imagePath}" does not exist in glob"`);
+
+type MusicData = {
+  artist: string;
+  title: string;
+  link: string;
+};
+
+const musicDataMap: {
+  [key: string]: MusicData;
+} = {
+  punisher: {
+    artist: "Phoebe Bridgers",
+    title: "Punisher",
+    link: "https://music.apple.com/us/album/punisher/1504699857",
+  },
+  "passage-du-desir": {
+    artist: "Johnny Blue Skies",
+    title: "Passage Du Desir",
+    link: "https://music.apple.com/us/album/passage-du-desir/1749134766",
+  },
+  "norman-f-g-rockwell": {
+    artist: "Lana Del Rey",
+    title: "Norman F***ing Rockwell",
+    link: "https://music.apple.com/us/album/norman-f-g-rockwell/1474669063",
+  },
+  "did-you-know-that-theres-a-tunnel-under-ocean-blvd": {
+    artist: "Lana Del Rey",
+    title: "Did You Know That There's a Tunnel Under Ocean Blvd",
+    link: "https://music.apple.com/us/album/did-you-know-that-theres-a-tunnel-under-ocean-blvd/1655349115",
+  },
+  "my-beautiful-dark-twisted-fantasy": {
+    artist: "Kanye West",
+    title: "My Beautiful Dark Twisted Fantasy",
+    link: "https://music.apple.com/us/album/my-beautiful-dark-twisted-fantasy/1440742903",
+  },
+  javelin: {
+    artist: "Sufjan Stevens",
+    title: "Javelin",
+    link: "https://music.apple.com/us/album/javelin/1700723922",
+  },
+};
+
+const { artist, title, link } = musicDataMap[id];
+---
+
+<a class="max-w-48" href={link}>
+  <div class="flex flex-col">
+    <Image src={images[imagePath]()} alt={title} />
+    <h3 class="text-2xl font-semibold">{title}</h3>
+    <h3 class="text-lg text-zinc-500">{artist}</h3>
+  </div>
+</a>

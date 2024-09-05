@@ -1,0 +1,51 @@
+---
+import MusicCard from "@/components/MusicCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Badge } from "@/components/ui/badge";
+
+const westernArtists = [
+  "Lana Del Rey",
+  "Kanye West",
+  "Sufjan Stevens",
+  "Taylor Swift",
+  "Frank Ocean",
+];
+const japaneseArtists = [
+  "YOASOBI",
+  "Vaundy",
+  "Aimyon",
+  "GReeeeN",
+  "SEKAI NO OWARI",
+  "Back Number",
+];
+const chineseArtists = ["赵雷", "蔡琴", "五月天", "茄子蛋"];
+---
+
+<Layout title="Music">
+  <h1 class="text-2xl font-bold mb-5">最近在听</h1>
+  <div class="flex flex-row gap-5">
+    <MusicCard id="punisher" />
+    <MusicCard id="passage-du-desir" />
+  </div>
+
+  <h1 class="text-2xl font-bold mb-5">最喜欢</h1>
+  <div class="flex flex-row gap-3">
+    <MusicCard id="norman-f-g-rockwell" />
+    <MusicCard id="my-beautiful-dark-twisted-fantasy" />
+    <MusicCard id="javelin" />
+    <MusicCard id="did-you-know-that-theres-a-tunnel-under-ocean-blvd" />
+  </div>
+
+  <h1 class="text-2xl font-bold mb-5">常听的歌手</h1>
+  <div class="flex flex-col gap-3">
+    <div class="flex flex-row gap-1">
+      {westernArtists.map((a) => <Badge>{a}</Badge>)}
+    </div>
+    <div class="flex flex-row gap-1">
+      {japaneseArtists.map((a) => <Badge>{a}</Badge>)}
+    </div>
+    <div class="flex flex-row gap-1">
+      {chineseArtists.map((a) => <Badge>{a}</Badge>)}
+    </div>
+  </div>
+</Layout>
