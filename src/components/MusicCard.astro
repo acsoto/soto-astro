@@ -1,6 +1,8 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import AlbumPopover from "@/components/AlbumPopover";
+
 interface Props {
   id: string;
 }
@@ -19,6 +21,7 @@ type MusicData = {
   artist: string;
   title: string;
   link: string;
+  notes?: string[];
 };
 
 const musicDataMap: {
@@ -38,11 +41,22 @@ const musicDataMap: {
     artist: "Lana Del Rey",
     title: "Norman F***ing Rockwell",
     link: "https://music.apple.com/us/album/norman-f-g-rockwell/1474669063",
+    notes: [
+      "The greatest歌如其名，是我认为Lana Del Rey生涯最佳也是我最喜欢的一首单曲。",
+    ],
   },
   "did-you-know-that-theres-a-tunnel-under-ocean-blvd": {
     artist: "Lana Del Rey",
     title: "Did You Know That There's a Tunnel Under Ocean Blvd",
     link: "https://music.apple.com/us/album/did-you-know-that-theres-a-tunnel-under-ocean-blvd/1655349115",
+    notes: [
+      "这张专整体来说我觉得会比NFR喜欢的曲子更多一点",
+      "同名曲开篇的弦乐和气息声，带着Lana的声音像是从海底传来，神秘安静。",
+      "Sweet中的\"What you doing with your life? Do you Think about it? Do you contemplate where we came from? Lately we've been making out a lot. Not talking about the stuff that's at the very heart of things. Do you want children? Do you wnna marry me? Do you wanna run marathons in Long Beach by the sea?\" 这一长串提问情绪强烈又无奈，是全专我最喜欢的一段。",
+      "A&W第一次听的惊讶不必多说。",
+      'Kintsugi本身安静的氛围加上中间的情绪和诉说感，非常适合晚上听。"Daddy I miss them, I\'m at the Roadrunner Cafe"这一段是其中最强烈的',
+      "Let The Light In 应该是最pop的一首。",
+    ],
   },
   "my-beautiful-dark-twisted-fantasy": {
     artist: "Kanye West",
@@ -56,13 +70,16 @@ const musicDataMap: {
   },
 };
 
-const { artist, title, link } = musicDataMap[id];
+const { artist, title, link, notes } = musicDataMap[id];
 ---
 
-<a class="max-w-48" href={link}>
+<div class="max-w-48">
   <div class="flex flex-col">
-    <Image src={images[imagePath]()} alt={title} />
+    <a href={link}><Image src={images[imagePath]()} alt={title} /></a>
     <h3 class="text-2xl font-semibold">{title}</h3>
-    <h3 class="text-lg text-zinc-500">{artist}</h3>
+    <div class="text-lg text-zinc-500">
+      {artist}
+      <AlbumPopover client:load content={notes} />
+    </div>
   </div>
-</a>
+</div>
