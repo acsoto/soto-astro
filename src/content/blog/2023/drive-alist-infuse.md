@@ -11,7 +11,6 @@ Aliyun Drive is a good choice in China, which doesn't limit speeds. But we need 
 
 ## Deploy Alist
 
-<GitHubCard repo={'alist-org/alist'} />
 
 We can deploy it on a free web service like [replit](http://replit.com). There's one-click [replit deployment](https://github.com/alist-org/alist-replit) by alist. Click `Run on Replit`. Wait till it is finished and click `Run`. Url and password will be shown in the Console.
 

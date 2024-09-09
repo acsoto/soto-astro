@@ -11,13 +11,11 @@ cover: ./front-end-learning-and-gatsby/202301181331217.png
 
 事情是从 3 天前开始的，给 AC 服务器加了一个 bStats 数据统计，因为想要做一个数据图就研究了一下 html 和 js ，最终用 jquery 和 highcharts 做了这样一个图出来放到了官网。
 
-<div className="w-1/2">
 ![](./front-end-learning-and-gatsby/202301140136639.png)
-</div>
 
 但是我又想做一个能直接返回一个 svg 文件的 api，类似于 [GitHub 上的数据统计](https://github.com/anuraghazra/github-readme-stats)，这样可以方便的插到 html 里面，如（我放到自己 vercel 上了）：
 
-<img src="./front-end-learning-and-gatsby/api"/>
+[![GitHub stats](https://soto-github-stats.vercel.app/api?username=acsoto&count_private=true&show_icons=true&hide_title=true&text_color=6F90B5)](https://github.com/acsoto)
 
 傻傻分不清楚 js 前端后端的区别，在研究这个 API 的过程中，我就不知不觉转移到了研究 AC 官网 wiki(用 vitepress 做的)如何能和官网主页用 vue 集成一下，因为此前几乎没有任何前端知识，搞不清楚一大堆的 js 框架都是干什么的，研究这个研究了很久，最后以 css 实在是太麻烦和样式相互乱覆盖告终。
 
@@ -35,9 +33,7 @@ const App = () => (
 
 此时的我如下图所示：
 
-<div className="w-1/2">
 ![](./front-end-learning-and-gatsby/202301102057443.png)
-</div>
 
 研究了一段时间之后大概知道了 React 是干什么的，于是开始试图找个框架试一下，最后在 Next.js 和 Gatsby 中选了 Gatsby，因为据说现成的东西比较多适合个人用。
 
@@ -341,9 +337,7 @@ return (
 
 效果:
 
-<div className="w-2/3">
 ![](./front-end-learning-and-gatsby/202301181354718.png)
-</div>
 
 ## 集成豆瓣数据的尝试
 
