@@ -10,59 +10,58 @@ import TailWindCSS from "../components/icons/tailwindcss.svg";
 import TensorFlow from "../components/icons/tensorflow.svg";
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import { Link } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+
+const github = "https://github.com/acsoto/";
 
 const projects = [
   {
-    name: "Musician and Genre Analysis Research",
-    link: null,
-    type: "Meritorious Winner in the MCM/ICM 2021",
+    name: "AtTackCraft - A Minecraft Server",
+    link: "https://www.mcac.cc",
+    type: "Java Development and Server Maintenance",
     description: [
-      "Constructed adjacency lists describing the music influence network topology of musicians, establishing relationships between influencers and followers through weighted directed paths. Computed the music influence value for each musician using DFS recursion",
-      "Combined graph networks with mathematical modeling to calculate musician similarity using cosine similarity and music feature influence using Pearson correlation coefficient",
+      "Independently maintained a Minecraft server for several years, with an average of 200+ daily active players, handling multiple major version updates and server migrations. Resisted malicious stress tests through reverse proxy and load balancing with Bungeecord, and dealt with DDoS attacks using elastic IPs and other cloud services.",
+      "Developed several Bukkit-based plugins in Java, implementing database anti-injection, asynchronous read/write to avoid main thread blocking, and adding various game features such as title systems, guild systems, currency systems, shop systems, GUI interfaces, group chat bots, etc., and configured and maintained numerous third-party plugins to enhance gameplay.",
+    ],
+    relevantProjects: [
+      "GuildManager",
+      "MedalCabinet",
+      "Gem",
+      "GemShop",
+      "AcShop",
+      "ItemManager",
+      "AC-channel-bot",
+      "AC-mirai-plugin",
+      "AtTackCraft-Core",
     ],
   },
   {
-    name: "New York City Taxi Fare Analysis & Music Preference Analysis",
-    link: null,
-    type: "Peter the Great St.Petersburg Polytechnic University Big Data & Machine Learning Project",
-    description: [
-      "Employed SVM, XGBoost, deep neural networks, and more for data analysis",
-    ],
-  },
-  {
-    name: "Long-term wind prediction in wind farm areas based on machine learning",
-    link: null,
-    type: "Graduation Project at BUAA",
-    description: [
-      "Implemented wind speed long-term forecasting using a deep neural network based on LSTM",
-    ],
-  },
-  {
-    name: "PetCharm Pet Platform",
+    name: "PetCharm",
     link: "https://github.com/PetCharm/petcharm_server",
-    type: "Backend Development (Django & MySQL)",
+    type: "Python Backend Developer",
+    time: "2022.03 - 2022.07",
     description: [
-      "Built a database system using MySQL",
-      "Developed backend APIs using Django based on the MVC model, utilizing Nginx and uwsgi reverse proxy",
-      "Implemented secure login using session and cookie mechanisms, set up email verification and object storage systems",
+      "Designed a complex database with 24 tables using MySQL, optimized indexes, normalized the relational schema to 4NF, and mapped the database using Django ORM. Developed RESTful APIs using the Django framework, documented them using Swagger, performed API testing with Postman, and handled frontend-backend integration.",
+      "Deployed the production environment using uWSGI and Nginx, and containerized the application with Docker.",
+      "Implemented features such as session management, email service, image object storage, posting and commenting, online veterinary consultation, dog walking route tracking, and BERT-based comment sentiment analysis.",
+    ],
+    relevantProjects: [
+      "TakeawayDelivery",
     ],
   },
   {
-    name: "Campus Takeaway Delivery Platform",
-    link: "https://github.com/acsoto/TakeawayDelivery",
-    type: "Backend Development (Django & MySQL)",
-    description: ["Similar to Petcharm"],
-  },
-  {
-    name: "Personal Website",
+    name: "Musician and Genre Influence Analysis",
     link: null,
-    type: "Frontend Development",
+    time: "2021.01",
+    type: "Math Modeling | 2021 MCM/ICM Meritorious Winner",
     description: [
-      "Built personal website using React and TypeScript, enhanced with TailwindCSS",
+      "Built a weighted directed graph model, recursively calculated the similarity between artists and music genres using graph DFS and improved cosine similarity algorithms, and introduced a decay factor to reflect the diminishing effects of indirect influence, summarizing the topological network of musical influences.",
+      "Cleaned and preprocessed the dataset, discovering a containment error in the official dataset during recursion and reported it. Evaluated the dispersion and weight variation of musical features using entropy, reflecting dynamic changes, and used Pearson correlation coefficient to identify the most influential features of leading musicians.",
     ],
   },
   {
-    name: "PCode Compiler",
+    name: "SysY to P-Code Compiler",
     link: "https://github.com/acsoto/BUAA-Compiler",
     type: "Java Development",
     description: [
@@ -74,7 +73,8 @@ const projects = [
     link: "https://github.com/acsoto/BUAA-Computer-Organization",
     type: "Verilog Development",
     description: [
-      "Implemented a 5-stage pipeline CPU based on MIPS instruction set using Verilog",
+      "Designed a finite state machine for lexical analysis, handled illegal characters, constructed an abstract syntax tree, and performed syntax analysis and error handling using recursive descent methods.",
+      "Compiled SysY language into P-Code, optimized the code by reducing redundant labels, and eventually designed a corresponding virtual machine for interpretation and execution.",
     ],
   },
   {
@@ -89,16 +89,6 @@ const projects = [
     type: "Swift Development",
     description: [
       "IoT device control using Swift and SwiftUI. Used HTTP to call backend APIs for real-time information and control of IoT devices",
-    ],
-  },
-  {
-    name: "AtTackCraft - A Minecraft Server",
-    link: "https://www.mcac.cc",
-    type: "Java Development",
-    description: [
-      "Ran a Minecraft server with 100+ players",
-      "Developed plugins (GuildManager, MedalCabinet...) for the server using Java and Spigot API",
-      "Optimized the server performance and fixed bugs",
     ],
   },
 ];
@@ -120,7 +110,7 @@ const projects = [
             National University of Singapore
           </div>
           <div class="text-lg">MSc | Computer Engineering</div>
-          <div class="text-lg text-gray-500">2024.1 - NOW</div>
+          <div class="text-lg text-gray-500">2024.1 - Present</div>
         </div>
       </div>
 
@@ -141,7 +131,7 @@ const projects = [
     <h2>Skills</h2>
     <div>
       <p>
-        <b>Programming Languages:</b> C, Java, Python, JavaScript, HTML, Swift, Verilog
+        <b>Programming Languages:</b> Java, C, Python, JavaScript, HTML, Swift, Verilog.
       </p>
       <p>
         <b>Frameworks & Tools:</b>
@@ -193,22 +183,33 @@ const projects = [
         <div>
           <h4>
             {project.link ? (
-              <a
-                class="font-extrabold text-gray-800 dark:text-gray-100 no-underline"
-                href={project.link}
-                target="_blank"
-              >
-                {project.name}
+              <a class="not-prose" href={project.link} target="_blank">
+                <div class="flex flex-row gap-1 hover:text-blue-400">
+                  <div class="font-extrabold">{project.name}</div>
+                  <div class="pt-2">
+                    <Link size={14} />
+                  </div>
+                </div>
               </a>
             ) : (
               <div class="font-extrabold">{project.name}</div>
             )}
-            <div class="text-gray-500">{project.type}</div>
+            <div class="text-zinc-500">{project.type}</div>
           </h4>
           <ul>
             {project.description.map((description) => (
               <li class="text-sm">{description}</li>
             ))}
+            {project.relevantProjects ? (
+              <li class="text-sm flex flex-row flex-wrap gap-2">
+                Relevant Projects:
+                {project.relevantProjects.map((proj) => (
+                  <a href={github + proj} target="_blank">
+                    <Badge>{proj}</Badge>
+                  </a>
+                ))}
+              </li>
+            ) : null}
           </ul>
         </div>
       ))
