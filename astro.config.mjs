@@ -1,4 +1,4 @@
-import {defineConfig} from 'astro/config';
+import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
@@ -15,7 +15,7 @@ export default defineConfig({
     },
     output: 'static',
     adapter: vercel({
-        webAnalytics: {enabled: true}
+        webAnalytics: { enabled: true }
     }),
     markdown: {
         shikiConfig: {
@@ -23,4 +23,7 @@ export default defineConfig({
             theme: 'material-theme-darker',
         },
     },
+    prefetch: {
+        prefetchAll: true,
+    }
 });

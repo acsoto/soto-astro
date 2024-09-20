@@ -2,6 +2,7 @@
 import "@/styles/globals.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title?: string;
   image?: string;
@@ -44,6 +45,7 @@ const { title, image, description, url } = Astro.props;
       title="SOTO"
       href={new URL("rss.xml", Astro.site)}
     />
+    <ViewTransitions />
   </head>
   <body class="bg-white text-black antialiased dark:bg-dark dark:text-soto-400">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-4xl xl:px-0">
