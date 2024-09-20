@@ -56,8 +56,9 @@ const { title, image, description, url } = Astro.props;
   </body>
 </html>
 
-<script is:inline>
-  const theme = (() => {
+<script>
+  document.addEventListener('astro:page-load',()=>{
+    const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
     }
@@ -73,7 +74,7 @@ const { title, image, description, url } = Astro.props;
     document.documentElement.classList.add("dark");
   }
 
-  window.localStorage.setItem("theme", theme);
+  window.localStorage.setItem("theme", theme || "light");
 
   const handleToggleClick = () => {
     const element = document.documentElement;
@@ -83,7 +84,9 @@ const { title, image, description, url } = Astro.props;
     localStorage.setItem("theme", isDark ? "dark" : "light");
   };
 
-  document
-    .getElementById("themeToggle")
-    .addEventListener("click", handleToggleClick);
+  const themeToggleButton = document.getElementById("themeToggle");
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener("click", handleToggleClick);
+  }
+  });
 </script>
