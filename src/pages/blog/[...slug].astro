@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import FormattedDate from "../../components/FormattedDate.astro";
+import { formatDate } from "@/lib/formatDate";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
@@ -42,8 +42,8 @@ const { Content } = await post.render();
 							<dd
 								class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"
 							>
-								<time>
-									<FormattedDate date={post.data.date} />
+								<time datetime={post.data.date.toISOString()}>
+									{formatDate(post.data.date)}
 								</time>
 							</dd>
 						</div>

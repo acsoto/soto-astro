@@ -11,7 +11,7 @@ export default function AlbumPopover({ content }: { content?: string[] }) {
     return (
         <Popover>
             <PopoverTrigger>
-                <Pen size={16} className="hover:stroke-soto-100" />
+                <Pen size={16} className="hover:stroke-soto-101" />
             </PopoverTrigger>
             <PopoverContent>
                 <div className="prose">
