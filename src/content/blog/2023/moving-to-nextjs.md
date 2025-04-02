@@ -166,7 +166,7 @@ async function addProps(imageNode: UnistImageNode): Promise<void> {
         { type: 'mdxJsxAttribute', name: 'width', value: res.width },
         { type: 'mdxJsxAttribute', name: 'height', value: res.height },
         { type: 'mdxJsxAttribute', name: 'quality', value: 100 },
-        { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur' },
+        { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur-sm' },
         { type: 'mdxJsxAttribute', name: 'blurDataURL', value: blur64 },
       ])
   }

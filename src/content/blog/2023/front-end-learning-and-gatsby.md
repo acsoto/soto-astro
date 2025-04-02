@@ -111,7 +111,7 @@ Gatsby 比起直接用 hugo 这种博客生成器来说要自己做一些事情�
   className="
   prose md:prose-lg lg:prose-xl
   prose-a:text-blue-500
-  hover:prose-a:text-blue-400 prose-img:rounded-xl
+  prose-a:hover:text-blue-400 prose-img:rounded-xl
   "
   dangerouslySetInnerHTML={{ __html: post.html }}
   itemProp="articleBody"
