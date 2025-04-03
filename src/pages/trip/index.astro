@@ -1,0 +1,27 @@
+---
+import TripCard from "@/components/TripCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import { formatDate } from "@/lib/formatDate";
+import { Image } from "astro:assets";
+
+import { getCollection } from "astro:content";
+const entries = (await getCollection("trip")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Layout>
+    <div class="space-y-5">
+        <ul class={"grid gap-6 lg:grid-cols-2"} style={{ listStyle: `none` }}>
+            {
+                entries.map((entry) => {
+                    return (
+                        <li>
+                            <TripCard entry={entry} />
+                        </li>
+                    );
+                })
+            }
+        </ul>
+    </div>
+</Layout>

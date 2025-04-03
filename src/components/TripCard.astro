@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+    entry: CollectionEntry<"trip">;
+}
+const { entry } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<a href={`/trip/${entry.id}`}>
+    <article
+        class="mx-auto overflow-hidden rounded-xl shadow-md duration-300 hover:scale-105 dark:bg-dark-100"
+    >
+        <div class="relative">
+            <Image
+                src={entry.data.cover}
+                class="w-full object-cover"
+                width={1600}
+                height={900}
+                alt=""
+            />
+            <div class="absolute bottom-3 left-0 right-0 flex items-center justify-center">
+                <h2 class="text-center text-white">
+                    <div class="text-2xl font-extrabold">
+                        {entry.data.title}
+                    </div>
+                    <div class="text-md font-bold">
+                        {entry.data.date.toLocaleString('en-US', { month: 'short', year: 'numeric' })}
+                    </div>
+                </h2>
+            </div>
+        </div>
+        <div class="p-3">
+            <div class="text-zinc-500 font-semibold">
+                <p>{entry.data.description}</p>
+            </div>
+        </div>
+    </article>
+</a>
