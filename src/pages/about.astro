@@ -1,4 +1,6 @@
 ---
+import Kubernetes from "../components/icons/kubernetes.svg";
+import Docker from "../components/icons/docker.svg";
 import BUAA from "../components/icons/BUAA.svg";
 import NUS from "../components/icons/NUS.svg";
 import ReactIcon from "../components/icons/react.svg";
@@ -17,7 +19,7 @@ const github = "https://github.com/acsoto/";
 
 const projects = [
   {
-    name: "AtTackCraft - A Minecraft Server",
+    name: "AtTackCraft - A Minecraft Server 一个MC服务器",
     link: "https://www.mcac.cc",
     type: "Java Development and Server Maintenance",
     description: [
@@ -37,7 +39,7 @@ const projects = [
     ],
   },
   {
-    name: "PetCharm",
+    name: "PetCharm 宠物一站式平台",
     link: "https://github.com/PetCharm/petcharm_server",
     type: "Python Backend Developer",
     time: "2022.03 - 2022.07",
@@ -51,7 +53,7 @@ const projects = [
     ],
   },
   {
-    name: "Musician and Genre Influence Analysis",
+    name: "Musician and Genre Influence Analysis 音乐流派影响力分析",
     link: null,
     time: "2021.01",
     type: "Math Modeling | 2021 MCM/ICM Meritorious Winner",
@@ -61,7 +63,7 @@ const projects = [
     ],
   },
   {
-    name: "SysY to P-Code Compiler",
+    name: "SysY to P-Code Compiler 编译器",
     link: "https://github.com/acsoto/BUAA-Compiler",
     type: "Java Development",
     description: [
@@ -69,7 +71,7 @@ const projects = [
     ],
   },
   {
-    name: "MIPS-CPU",
+    name: "MIPS-CPU 五级流水线",
     link: "https://github.com/acsoto/BUAA-Computer-Organization",
     type: "Verilog Development",
     description: [
@@ -96,10 +98,10 @@ const projects = [
 
 <Layout title="About">
   <div class="prose dark:prose-invert max-w-none lg:prose-lg">
-    <h2 class="text-center font-extrabold">周子航 ｜ Zhou Zihang</h2>
+    <h2 class="text-center font-extrabold">Zhou Zihang | 周子航</h2>
     <hr />
 
-    <h2>Education</h2>
+    <h2>Education 教育</h2>
     <div class="flex flex-col gap-5">
       <div class="flex items-center gap-4">
         <div>
@@ -110,7 +112,7 @@ const projects = [
             National University of Singapore
           </div>
           <div class="text-lg">MSc | Computer Engineering</div>
-          <div class="text-lg text-gray-500">2024.1 - 2025.1</div>
+          <div class="text-lg text-gray-500">2024.1 - 2025.1 | 新加坡国立大学</div>
         </div>
       </div>
 
@@ -121,21 +123,31 @@ const projects = [
         <div class="col-span-3">
           <div class="text-2xl font-extrabold">Beihang University</div>
           <div class="text-lg">BEng | Computer Science & Technology</div>
-          <div class="text-lg text-gray-500">2019.9 - 2023.6</div>
+          <div class="text-lg text-gray-500">2019.9 - 2023.6 | 北京航空航天大学</div>
         </div>
       </div>
     </div>
 
     <hr />
 
-    <h2>Skills</h2>
+    <h2>Skills 技术栈</h2>
     <div>
       <p>
-        <b>Programming Languages:</b> Java, C, Python, JavaScript, HTML, Swift, Verilog.
+        <b>Programming Languages:</b> Go, Java, C, Python, JavaScript, Swift, Verilog.
       </p>
       <p>
         <b>Frameworks & Tools:</b>
-        <span class="space-x-2">
+        <span class="ml-2 space-x-2">
+          <Image
+            src={Kubernetes}
+            alt={"Kubernetes"}
+            class="h-6 w-6 inline align-middle"
+          />
+          <Image
+            src={Docker}
+            alt={"Docker"}
+            class="h-6 w-6 inline align-middle"
+          />
           <Image
             src={ReactIcon}
             alt={"React"}
@@ -177,7 +189,7 @@ const projects = [
 
     <hr />
 
-    <h2>Projects</h2>
+    <h2>Projects 项目</h2>
     {
       projects.map((project) => (
         <div>
@@ -205,7 +217,7 @@ const projects = [
                 Relevant Projects:
                 {project.relevantProjects.map((proj) => (
                   <a href={github + proj} target="_blank">
-                    <Badge>{proj}</Badge>
+                    <div>{proj}</div>
                   </a>
                 ))}
               </li>
